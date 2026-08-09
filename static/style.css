@@ -102,3 +102,11 @@ body {
     text-decoration: none;  /* 無底線 */
     transition: 0.3s;       /* 動畫 */
 }
+
+/* ✨ 設定個人照片大小與樣式 */
+.profile-img {
+    width: 250px;       /* 👈 設定照片寬度，可以自由調整數字（如 200px 或 300px） */
+    height: 250px;      /* 👈 設定照片高度，維持跟寬度一樣通常比較好 */
+    object-fit: cover;  /* 💡 這行非常重要！能確保照片縮放時不會變形或被壓扁 */
+    border-radius: 50%; /* 🎨 選擇性：如果您想要讓照片變成「正圓形」，請加上這行 */
+}
