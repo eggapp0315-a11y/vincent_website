@@ -1,173 +1,104 @@
 /* 標題 */
+a {
+    color: #38bdf8;             /* 預設連結改為亮藍色 */
+}
+
 h1 {
-    color: #38bdf8;            /* 主標題顏色（藍色） */
+    color: #0284c7;             /* 主標題：深天藍色（修正原先偏灰白的顏色） */
     font-size: 40px;           /* 字體大小 */
 }
 
 h2 {
-    color: #22c55e;            /* 副標題顏色（綠色） */
-}
-
-/* 區塊 */
-.section {
-    padding: 60px 20px;        /* 上下60px，左右20px間距 */
+    color: #0284c7;             /* 副標題：一致的藍色調 */
 }
 
 /* 卡片 */
 .card {
-    background: rgba(30, 41, 59, 0.8); /* 半透明深色背景 */
+    background: rgba(255, 255, 255, 0.85); /* 半透明亮色卡片背景（配合 dark/slate 文字） */
     margin: 20px auto;         /* 上下20px，自動置中 */
     padding: 25px;             /* 內距 */
     width: 80%;                /* 寬度80% */
     max-width: 600px;          /* 最大寬600px */
     border-radius: 15px;       /* 圓角 */
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.2); /* 藍色陰影 */
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.15); /* 軟藍色柔和陰影 */
     transition: transform 0.3s, box-shadow 0.3s; /* 動畫效果 */
 }
 
 /* 滑鼠效果 */
 .card:hover {
     transform: translateY(-5px); /* 向上浮5px */
-    box-shadow: 0 0 30px rgba(56, 189, 248, 0.6); /* 陰影變亮 */
+    box-shadow: 0 8px 30px rgba(14, 165, 233, 0.3); /* 陰影加深顯眼 */
 }
 
 /* 打字機效果 */
 .typing {
-    border-right: 3px solid #38bdf8; /* 右邊游標線 */
+    border-right: 3px solid #0284c7; /* 右邊游標線改為深藍 */
     white-space: nowrap;             /* 不換行 */
     overflow: hidden;                /* 超出隱藏 */
     width: 0;                        /* 一開始寬度為0 */
     animation: typing 3s steps(30, end) forwards, blink 0.8s infinite; /* 打字+閃爍 */
 }
 
-@keyframes typing {
-    to { width: 100%; }              /* 動畫結束顯示全部文字 */
-}
-
-@keyframes blink {
-    50% { border-color: transparent; } /* 游標閃爍 */
-}
-
-/* 技能條 */
-.skill {
-    margin: 10px 0;         /* 上下間距 */
-    text-align: left;       /* 靠左 */
-}
-
-.bar {
-    height: 10px;           /* 高度 */
-    background: #1e293b;    /* 背景灰色 */
-    border-radius: 5px;     /* 圓角 */
-}
-
-.fill {
-    height: 10px;           /* 高度 */
-    background: #38bdf8;    /* 藍色填滿 */
-    border-radius: 5px;     /* 圓角 */
-}
-
 /* 整體頁面 */
 body {
     margin: 0;              /* 去掉預設邊距 */
     font-family: Arial;     /* 字體 */
-    background: #0f172a;    /* 深色背景 */
-    color: white;           /* 文字白色 */
+    background: #d7d8d9;    /* 補齊原本缺失的語法：採用清爽極簡的淺灰藍背景 */
+    color: #334155;           /* 深石板灰文字 */
 }
 
 /* 導航列 */
 .navbar {
-    background: #020617;    /* 深色背景 */
+    margin-top: 20px;
+    background: #17264b;    /* 導航列改為深藍黑背景，呈現現代高質感對比 */
     padding: 15px;          /* 內距 */
     display: flex;          /* 使用 flex 排版 */
     justify-content: flex-start; /* 靠左 */
+    border-radius: 15px;
     gap: 30px;              /* 間距30px */
 }
 
 .navbar a {
-    color: #38bdf8;         /* 藍色連結 */
+    color: #f1f5f9;         /* 導航文字改為亮白 */
     text-decoration: none;  /* 移除底線 */
     font-size: 18px;        /* 字體大小 */
 }
 
 .navbar a:hover {
-    color: #22c55e;         /* 滑鼠移上變綠 */
-}
-
-/* 內容 */
-.container {
-    padding: 40px;          /* 整體內距 */
-}
-
-.content {
-    display: flex;          /* 左右排列 */
-    align-items: center;    /* 垂直置中 */
-    justify-content: space-between; /* 左右分開 */
-    gap: 40px;              /* 間距 */
-    padding: 20px;          /* 內距 */
-    max-width: 900px;       /* 最大寬度 */
-    margin: auto;           /* 置中 */
-}
-
-/* 圖片 */
-.profile-img {
-    width: 400px;           /* 圖片大小 */
-    border-radius: 12px;    /* 圓角 */
-    margin-left: -100px;    /* 往左偏移 */
-}
-
-/* 文字 */
-.text {
-    margin-right: 20px;     /* 右邊間距 */
+    color: #38bdf8;         /* 滑鼠移上變亮藍色 */
 }
 
 /* 按鈕 */
 .button {
     display: inline-block;  /* 可設定尺寸 */
     padding: 12px 22px;     /* 內距 */
-    background: #38bdf8;    /* 藍色背景 */
-    color: black;           /* 黑字 */
+    background: #0284c7;    /* 藍色背景 */
+    color: #ffffff;         /* 白字（提高可讀性） */
     border-radius: 10px;    /* 圓角 */
     text-decoration: none;  /* 無底線 */
     transition: 0.3s;       /* 動畫 */
 }
 
 .button:hover {
-    background: #0ea5e9;    /* 深藍 */
+    background: #0369a1;    /* 深藍 */
     transform: translateY(-2px); /* 向上浮 */
 }
 
 /* Google 翻譯 */
-#google_translate_element {
-    margin-left: auto;      /* 推到最右 */
-}
-
 .goog-te-combo {
     padding: 5px;           /* 內距 */
     border-radius: 5px;     /* 圓角 */
-    background: #020617;    /* 背景色 */
-    color: white;           /* 字體顏色 */
-    border: 1px solid #38bdf8; /* 邊框 */
-}
-
-/* 移除 Google 上方條 */
-.goog-te-banner-frame.skiptranslate {
-    display: none !important; /* 強制隱藏 */
-}
-
-body {
-    top: 0px !important;    /* 防止被往下推 */
+    background: #0f172a;    /* 背景色（配合導航列） */
+    color: #ffffff;         /* 字體顏色 */
+    border: 1px solid #0284c7; /* 藍色邊框 */
 }
 
 .button2 {
     display: inline-block;  /* 可設定尺寸 */
-    padding: 6px 22px;     /* 內距 */
-    background: #38bdf8;    /* 藍色背景 */
-    color: black;           /* 黑字 */
+    padding: 6px 22px;      /* 內距 */
+    background: #0284c7;    /* 藍色背景 */
+    color: #ffffff;         /* 白字 */
     border-radius: 10px;    /* 圓角 */
     text-decoration: none;  /* 無底線 */
     transition: 0.3s;       /* 動畫 */
 }
-
-.button:hover {
-    background: #0ea5e9;    /* 深藍 */
-    transform: translateY(-2px); /* 向上浮 */

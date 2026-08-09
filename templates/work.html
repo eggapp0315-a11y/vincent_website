@@ -8,34 +8,42 @@
 
 <div class="navbar">
     <a href="/">HOME</a>
-    <a href="/about">ABOUT_ME</a>
+    <a href="/about">ABOUT ME</a>
     <a href="/projects">PROJECTS</a>
-    <!-- 🔥 翻譯按鈕 -->
+    <a href="/work">WORK</a>
+    <a href="/send">SEND</a>
     <div id="google_translate_element"></div>
 </div>
 
 <div class="container">
-    <h1>What I can do</h1>
+    <h1>What can I do</h1>
 
     <div class="card">
         <h2>Guitar Class</h2>
         <p>I can teach you how to play Guitar</p>
-
         <a href="/Guitar" target="_blank" class="button">
             🔗 View Work
         </a>
-
-
     </div>
-        <div class="card">
+
+    <div class="card">
         <h2>Website Design</h2>
         <p>I can Design website to you </p>
-
         <a href="/website" target="_blank" class="button">
             🔗 View Work
         </a>
     </div>
+
+    <div class="card">
+        <h2>Cook the cookie</h2>
+        <p>I can cook the Taiwanese desserts</p>
+        <!-- 修正：將 /website 改為對應的頁面路由如 /cookie -->
+        <a href="/cookie" target="_blank" class="button">
+            🔗 View Work
+        </a>
+    </div>
 </div>
+
 <script>
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({

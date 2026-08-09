@@ -47,35 +47,8 @@ def Guitar():
 def website():
     return render_template("website.html")
 
-@app.route("/contact", methods=["GET", "POST"])
-def contact():
-    if request.method == "POST":
-        user_email = request.form.get("email", "").strip()
-        message = request.form.get("message", "").strip()
 
-        if not EMAIL_ADDRESS or not SENDGRID_API_KEY:
-            return "❌ EMAIL_ADDRESS or SENDGRID_API_KEY is missing"
 
-        if not user_email or not message:
-            return "❌ Email and message are required"
-
-        email = Mail(
-            from_email=EMAIL_ADDRESS,
-            to_emails=EMAIL_ADDRESS,
-            subject="New message from website",
-            plain_text_content=f"Sender: {user_email}\n\nMessage:\n{message}"
-        )
-        email.reply_to = user_email
-
-        try:
-            sg = SendGridAPIClient(SENDGRID_API_KEY)
-            response = sg.send(email)
-            return f"✅ Email sent successfully! Status: {response.status_code}"
-        except Exception as e:
-            print("SENDGRID ERROR:", str(e))
-            return f"❌ Failed to send email: {e}"
-
-    return render_template("contact.html")
 
 @app.route("/send")
 def send():
@@ -83,6 +56,7 @@ def send():
 
 if __name__ == "__main__":
     app.run()
+
 
 #上傳 #git add .
 # #git commit -m"update project"
