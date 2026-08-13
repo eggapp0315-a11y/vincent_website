@@ -6,37 +6,77 @@
 </head>
 <body>
 
-<div class="navbar">
-    <a href="/">HOME</a>
-    <a href="/about">ABOUT ME</a>
-    <a href="/projects">PROJECTS</a>
-    <a href="/work">WORK</a>
-    <a href="/send">SEND</a>
-    <!-- 🔥 翻譯按鈕 -->
-    <div id="google_translate_element"></div>
-</div>
+    <div class="navbar">
+        <a href="/">HOME</a>
+        <a href="/about">ABOUT ME</a>
+        <a href="/projects">PROJECTS</a>
+        <a href="/work">WORK</a>
+        <a href="/send">SEND</a>
+        <!-- 🔥 翻譯按鈕 -->
+        <div id="google_translate_element"></div>
+    </div>
 
-<div class="container">
-    <div class="content">
-        <img src="{{ url_for('static', filename='vincent2.jpg') }}" class="profile-img">
+    <div class="container">
+        <div class="content">
+            
+            <!-- 📌 左欄：個人頭像與歡迎詞 -->
+            <div class="main-info">
+                <img src="{{ url_for('static', filename='vincent2.jpg') }}" class="profile-img">
+                <div class="text">
+                    <h1>WELCOME TO MY WEBSITE</h1>
+                    <p>I AM FRASER HIGH SCHOOL STUDENT</p>
+                </div>
+            </div>
 
-        <div class="text">
-            <h1>WELCOME TO MY WEBSITE</h1>
-            <p>I AM FRASER HIGH SCHOOL STUDENT</p>
+            <!-- 📌 中間偏右欄：圖片自動垂直滾動展示區 -->
+            <div class="image-gallery">
+                <h3>MY GALLERY</h3>
+                <div class="scroll-container">
+                    <!-- 第一組圖片 -->
+                    <div class="scroll-content">
+                        <img src="{{ url_for('static', filename='food.jpg') }}" alt="Photo 1">
+                        <img src="{{ url_for('static', filename='Website Design.jpg') }}" alt="Photo 2">
+                        <img src="{{ url_for('static', filename='guitar class.jpg') }}" alt="Photo 3">
+                        <!-- <img src="{{ url_for('static', filename='vincent2.jpg') }}" alt="Photo 4"> -->
+                    </div>
+                    <!-- 第二組圖片（複製一份達成無縫連續垂直滾動） -->
+                    <div class="scroll-content">
+                         <img src="{{ url_for('static', filename='food.jpg') }}" alt="Photo 1">
+                        <img src="{{ url_for('static', filename='Website Design.jpg') }}" alt="Photo 2">
+                        <img src="{{ url_for('static', filename='guitar class.jpg') }}" alt="Photo 3">
+                        <!-- <img src="{{ url_for('static', filename='vincent2.jpg') }}" alt="Photo 4"> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📌 最右欄：社群媒體連結 -->
+            <div class="social-links-sidebar">
+                <h3>CONNECT WITH ME</h3>
+                <div class="links-container">
+                    <a href="https://github.com/eggapp0315-a11y" target="_blank" class="social-btn github">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.instagram.com/vincent9988776655/" target="_blank" class="social-btn instagram">
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.facebook.com/shi.shao.xun.822131" target="_blank" class="social-btn facebook">
+                        <span>Facebook</span>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </div>
-</div>
-<script>
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,zh-TW,zh-CN,ja,ko,fr,de,es,it,pt,ru,ar,th,vi',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-}
-</script>
 
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,zh-TW,zh-CN,ja,ko,fr,de,es,it,pt,ru,ar,th,vi',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="//://google.com"></script>
 </body>
 </html>

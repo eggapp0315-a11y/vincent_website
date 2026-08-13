@@ -1,10 +1,12 @@
-/* 標題 */
+/* ==========================================
+   基礎樣式與文字顏色
+   ========================================== */
 a {
     color: #38bdf8;             /* 預設連結改為亮藍色 */
 }
 
 h1 {
-    color: #0284c7;             /* 主標題：深天藍色（修正原先偏灰白的顏色） */
+    color: #0284c7;             /* 主標題：深天藍色 */
     font-size: 40px;           /* 字體大小 */
 }
 
@@ -12,45 +14,22 @@ h2 {
     color: #0284c7;             /* 副標題：一致的藍色調 */
 }
 
-/* 卡片 */
-.card {
-    background: rgba(255, 255, 255, 0.85); /* 半透明亮色卡片背景（配合 dark/slate 文字） */
-    margin: 20px auto;         /* 上下20px，自動置中 */
-    padding: 25px;             /* 內距 */
-    width: 80%;                /* 寬度80% */
-    max-width: 600px;          /* 最大寬600px */
-    border-radius: 15px;       /* 圓角 */
-    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.15); /* 軟藍色柔和陰影 */
-    transition: transform 0.3s, box-shadow 0.3s; /* 動畫效果 */
-}
-
-/* 滑鼠效果 */
-.card:hover {
-    transform: translateY(-5px); /* 向上浮5px */
-    box-shadow: 0 8px 30px rgba(14, 165, 233, 0.3); /* 陰影加深顯眼 */
-}
-
-/* 打字機效果 */
-.typing {
-    border-right: 3px solid #0284c7; /* 右邊游標線改為深藍 */
-    white-space: nowrap;             /* 不換行 */
-    overflow: hidden;                /* 超出隱藏 */
-    width: 0;                        /* 一開始寬度為0 */
-    animation: typing 3s steps(30, end) forwards, blink 0.8s infinite; /* 打字+閃爍 */
-}
-
 /* 整體頁面 */
 body {
     margin: 0;              /* 去掉預設邊距 */
     font-family: Arial;     /* 字體 */
-    background: #d7d8d9;    /* 補齊原本缺失的語法：採用清爽極簡的淺灰藍背景 */
-    color: #334155;           /* 深石板灰文字 */
+    background: #d7d8d9;    /* 淺灰藍背景 */
+    color: #334155;         /* 深石板灰文字 */
 }
+
+/* ==========================================
+   元件樣式（導航列、卡片、按鈕、打字機）
+   ========================================== */
 
 /* 導航列 */
 .navbar {
     margin-top: 20px;
-    background: #17264b;    /* 導航列改為深藍黑背景，呈現現代高質感對比 */
+    background: #17264b;    /* 導航列深藍黑背景 */
     padding: 15px;          /* 內距 */
     display: flex;          /* 使用 flex 排版 */
     justify-content: flex-start; /* 靠左 */
@@ -68,12 +47,38 @@ body {
     color: #38bdf8;         /* 滑鼠移上變亮藍色 */
 }
 
-/* 按鈕 */
+/* Google 翻譯選單 */
+.goog-te-combo {
+    padding: 5px;           /* 內距 */
+    border-radius: 5px;     /* 圓角 */
+    background: #0f172a;    /* 背景色（配合導航列） */
+    color: #ffffff;         /* 字體顏色 */
+    border: 1px solid #0284c7; /* 藍色邊框 */
+}
+
+/* 卡片 */
+.card {
+    background: rgba(255, 255, 255, 0.85); /* 半透明亮色卡片背景 */
+    margin: 20px auto;         /* 上下20px，自動置中 */
+    padding: 25px;             /* 內距 */
+    width: 80%;                /* 寬度80% */
+    max-width: 600px;          /* 最大寬600px */
+    border-radius: 15px;       /* 圓角 */
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.15); /* 軟藍色柔和陰影 */
+    transition: transform 0.3s, box-shadow 0.3s; /* 動畫效果 */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* 向上浮5px */
+    box-shadow: 0 8px 30px rgba(14, 165, 233, 0.3); /* 陰影加深顯眼 */
+}
+
+/* 按鈕樣式 1 */
 .button {
     display: inline-block;  /* 可設定尺寸 */
     padding: 12px 22px;     /* 內距 */
     background: #0284c7;    /* 藍色背景 */
-    color: #ffffff;         /* 白字（提高可讀性） */
+    color: #ffffff;         /* 白字 */
     border-radius: 10px;    /* 圓角 */
     text-decoration: none;  /* 無底線 */
     transition: 0.3s;       /* 動畫 */
@@ -84,15 +89,7 @@ body {
     transform: translateY(-2px); /* 向上浮 */
 }
 
-/* Google 翻譯 */
-.goog-te-combo {
-    padding: 5px;           /* 內距 */
-    border-radius: 5px;     /* 圓角 */
-    background: #0f172a;    /* 背景色（配合導航列） */
-    color: #ffffff;         /* 字體顏色 */
-    border: 1px solid #0284c7; /* 藍色邊框 */
-}
-
+/* 按鈕樣式 2 */
 .button2 {
     display: inline-block;  /* 可設定尺寸 */
     padding: 6px 22px;      /* 內距 */
@@ -103,10 +100,147 @@ body {
     transition: 0.3s;       /* 動畫 */
 }
 
-/* ✨ 設定個人照片大小與樣式 */
+/* 打字機效果 */
+.typing {
+    border-right: 3px solid #0284c7; /* 右邊游標線改為深藍 */
+    white-space: nowrap;             /* 不換行 */
+    overflow: hidden;                /* 超出隱藏 */
+    width: 0;                        /* 一開始寬度為0 */
+    animation: typing 3s steps(30, end) forwards, blink 0.8s infinite; /* 打字+閃爍 */
+}
+
+/* 個人大頭貼照片 */
 .profile-img {
-    width: 250px;       /* 👈 設定照片寬度，可以自由調整數字（如 200px 或 300px） */
-    height: 250px;      /* 👈 設定照片高度，維持跟寬度一樣通常比較好 */
-    object-fit: cover;  /* 💡 這行非常重要！能確保照片縮放時不會變形或被壓扁 */
-    border-radius: 50%; /* 🎨 選擇性：如果您想要讓照片變成「正圓形」，請加上這行 */
+    width: 250px;       
+    height: 250px;      
+    object-fit: cover;  /* 確保照片縮放時不會變形 */
+    border-radius: 50%; /* 大頭貼圓形外觀 */
+}
+
+/* ==========================================
+   🔥 三欄式佈局與寬度控制
+   ========================================== */
+
+/* 讓主內容區塊呈現三欄並排 */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 35px;            /* 三欄之間的間距 */
+    max-width: 1200px;    /* 擴大總寬度以完美容納三欄 */
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* 1. 左欄：個人簡介區塊（flex: 1 自動填滿左側賸餘空間） */
+.main-info {
+    flex: 1;
+    text-align: center;
+    min-width: 300px;
+}
+
+/* 2. 中間偏右欄：圖片滾動外框（固定寬度） */
+.image-gallery {
+    width: 260px;
+    background: rgba(255, 255, 255, 0.85); /* 與卡片一致的半透明白 */
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.15);
+}
+
+.image-gallery h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #0284c7;         /* 改為與網頁主題一致的深天藍色 */
+}
+
+/* 3. 最右欄：社群連結外框（固定寬度） */
+.social-links-sidebar {
+    width: 200px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.15);
+    text-align: center;
+}
+
+.social-links-sidebar h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #0284c7;         /* 改為與網頁主題一致的深天藍色 */
+}
+
+/* ==========================================
+   🖼️ 相簿自動垂直無縫滾動核心效果
+   ========================================== */
+.scroll-container {
+    max-height: 420px;    /* 固定容器高度 */
+    overflow: hidden;     /* 隱藏原生滾動條，全靠自動動畫滾動 */
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;            /* 圖片與圖片之間的間距 */
+    padding-bottom: 12px; /* 確保兩組圖片交接處間距相同，達成完美無縫 */
+    animation: autoScrollVertical 12s linear infinite; /* 12秒無限循環滾動 */
+}
+
+.scroll-container img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+/* 滑鼠移入容器時：暫停滾動 */
+.scroll-container:hover .scroll-content {
+    animation-play-state: paused; 
+}
+
+/* 滑鼠移入圖片時：微放大提升質感 */
+.scroll-container img:hover {
+    transform: scale(1.02);
+}
+
+/* 垂直滾動動畫：向垂直 Y 軸位移 -100% */
+@keyframes autoScrollVertical {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+
+/* ==========================================
+   🔗 最右欄：社群按鈕美化樣式
+   ========================================== */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;            /* 按鈕與按鈕之間的上下間距 */
+}
+
+.social-btn {
+    display: block;
+    padding: 12px;
+    color: #ffffff !important; /* 強制覆蓋全域 a 標籤顏色，確保文字維持白色 */
+    text-decoration: none;  /* 移除底線 */
+    font-weight: bold;
+    border-radius: 8px;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+/* 各別社群官方主題色 */
+.github { background-color: #24292e; }
+.instagram { background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+.facebook { background-color: #1877f2; }
+
+/* 按鈕懸停效果：微往上浮起並稍微變亮 */
+.social-btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1); 
 }
