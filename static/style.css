@@ -244,3 +244,29 @@ body {
     transform: translateY(-3px);
     filter: brightness(1.1); 
 }
+.about {
+    /* ❌ 刪除原本的 margin-left: 500px，改由父層或置中處理 */
+    color: black;
+    font-size: 30px;       /* 稍微放大字體，比較好閱讀 */
+    line-height: 0.8;      /* 調整行高，讓文字有呼吸空間 */
+}
+
+.container{
+    margin-left: 100px;
+}
+
+.square {
+    width: 1200px;          /* 寬度從 900px 縮小一點，更適合放卡片文字 */
+    height: auto;          /* 💡 重點：改成 auto，讓圖案高度隨文字自動伸展，才不會卡死 */
+    min-height: 300px;     /* 設定一個保底的最小高度 */
+    background: #38bdf8;   /* 您的亮藍色 */
+    border-radius: 40px;   /* 圓角（20% 有時候在固定尺寸下會變形，改用 px 固定圓角） */
+    padding: 40px;         /* 內距：讓文字絕對不會貼到圖案邊緣 */
+    margin: 30px auto;     /* 💡 重點：自動置中，不需要手動用 margin-left 盲猜位置 */
+    
+    /* 讓圖案內部的文字垂直、水平絕對置中（可選） */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; /* 文字靠左對齊，但整體在正方形內置中 */
+}
