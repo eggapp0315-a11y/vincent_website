@@ -109,14 +109,14 @@ body {
     animation: typing 3s steps(30, end) forwards, blink 0.8s infinite; /* 打字+閃爍 */
 }
 
-/* 個人大頭貼照片 */
+/* 其他照片 */
 .profile-img {
-    width: 250px;       
-    height: 250px;      
+    width: 500px;       
+    height: 650px;      
     object-fit: cover;  /* 確保照片縮放時不會變形 */
-     /* 大頭貼圓形外觀 */
 }
 
+/* 大頭照 */
 .profile-img1 {
     width: 250px;       
     height: 250px;      
