@@ -45,6 +45,11 @@ def Guitar():
 def website():
     return render_template("website.html")
 
+@app.route('/google77b51b745d5d14fa.html')
+def google_verify():
+    return render_template('google77b51b745d5d14fa.html')
+
+
 
 
 
