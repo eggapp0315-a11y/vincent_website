@@ -3,8 +3,6 @@ from flask import (
     flash, url_for, session, send_from_directory
 )
 from flask import Flask, render_template, request
-import smtplib
-from email.mime.text import MIMEText
 import time
 import os
 
@@ -50,9 +48,7 @@ def website():
 
 
 
-@app.route("/send")
-def send():
-    return render_template("send.html")
+
 
 if __name__ == "__main__":
     app.run()
